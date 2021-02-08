@@ -1,11 +1,10 @@
 ## TODO
 
-Basic TODO app using:
+Basic react TODO app using:
 
 - Hooks
-- Context api
 - Localstorage
-- Illustration from unDraw
+- Tailwind styling
 - Deploy to netlify
 
-[Demo](https://eager-cori-bee4df.netlify.app/)
+[Live demo site](https://eager-cori-bee4df.netlify.app/)

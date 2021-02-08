@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
-import { Button, TextField } from '@material-ui/core';
 
 const TodoForm = ({ addTodo }) => {
   const [todo, setTodo] = useState({
@@ -23,15 +22,21 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <form className='todo-form' onSubmit={handleSubmit}>
-      <TextField
+    <form className='flex flex-col md:flex-row flex-1 md:space-x-2 justify-end h-8 space-y-2 md:space-y-0' onSubmit={handleSubmit}>
+      <input
+        className='w-full rounded-lg p-3 shadow-md'
         label='Text'
         type='text'
         name='text'
         value={todo.text}
         onChange={handleTextChange}
       />
-      <Button type='submit'>Add</Button>
+      <button
+        type='submit'
+        className="bg-indigo-100 hover:bg-indigo-200 transform hover:scale-110 transition duration-150 ease-in-out rounded-lg text-gray-700 px-2"
+      >
+        Add
+      </button>
     </form>
   );
 };
